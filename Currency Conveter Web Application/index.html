@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwYYpN9fI2K39C45y0RYdQIJjQ3XFK6XnFBXFIdAmlM1mn-s5ytJoRZUTbH4amTrY9elY&usqp=CAUs"
+        type="image/png">
+    <title>Conveter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Currency Conveter</h1>
+        <div class="row">
+            <div class="col">
+                <select class="currency">
+                    <option>Select</option>
+                </select>
+                <input type="text" id="inp_currency" name="">
+            </div>
+            <div class="col">
+                <select class="currency">
+                    <option>Select</option>
+                </select>
+                <input type="text" id="out_currency" disabled name="">
+            </div>
+        </div>
+        <button onClick="converter()">Convert</button>
+    </div>
+    <script>
+        var select = document.querySelectorAll('.currency'),
+            inp_currency = document.getElementById('inp_currency'),
+            out_currency = document.getElementById('out_currency');
+
+        const host = 'api.frankfurter.app';
+
+        // Fetch available currencies and populate dropdowns
+        fetch(`https://${host}/currencies`)
+            .then((data) => data.json())
+            .then((data) => {
+                const entries = Object.entries(data);
+                let options = entries.map(([code]) => `<option value="${code}">${code}</option>`).join('');
+                select[0].innerHTML += options;
+                select[1].innerHTML += options;
+            })
+            .catch(error => console.error('Error fetching currencies:', error));
+
+        function converter() {
+            let input_currency_val = inp_currency.value;
+
+            if (!input_currency_val || isNaN(input_currency_val) || input_currency_val <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+
+            if (select[0].value !== select[1].value) {
+                fetch(`https://${host}/latest?amount=${input_currency_val}&from=${select[0].value}&to=${select[1].value}`)
+                    .then((val) => val.json())
+                    .then((val) => {
+                        if (val.rates && Object.keys(val.rates).length > 0) {
+                            out_currency.value = Object.values(val.rates)[0].toFixed(2);
+                        } else {
+                            alert('Error: Unable to fetch exchange rate.');
+                        }
+                    })
+                    .catch(error => console.error('Error fetching exchange rate:', error));
+
+            } else {
+                alert('Please select two different currencies');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
