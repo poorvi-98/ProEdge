@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Poorvi Varshney</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Poorvi Varshney</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="Togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="Togglemenu()">About</a></li>
+                <li><a href="#Experience" onclick="Togglemenu()">Experience</a></li>
+                <li><a href="#Projects" onclick="Togglemenu()">Projects</a></li>
+                <li><a href="#Contact" onclick="Togglemenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="pic-container">
+            <img src="images/profile.png" alt="Poorvi Varshney profile pic" class="circular-image" />
+        </div>
+        <div class="section__text">
+            <p class="section__text___p1">Hello, I'm</p>
+            <h1 class="tittle">Poorvi Varshney</h1>
+            <P class="section__text__p2">Full stack developer</P>
+            <div class="btn-containor">
+                <button class="btn-color-2" onclick="window.open('./images/resume.png')">Download resume</button>
+                <button class="btn-color-1" onclick="location.href('./#contact')">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./images/linkedin.png" alt="My Linkedin profile " class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/poorvi-varshney-163477283/'" />
+                <img src="./images/github.png" alt="My github profile " class="icons"
+                    onclick="location.href='https://github.com/poorvi-98'" />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get to know more</p>
+        <h1 class="title">About me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./images/profile.png" alt="profile picture" class="about-pic" />
+            </div>
+            <div class="about-details-container">;
+                <div class="about-container">
+                    <div class="details-container">
+                        <img src="./images/experience.png" alt="Experience icon" class="icon" />
+                        <h3>Experience</h3>
+                        <P>Freshers <br>Front-end developer</P>
+                    </div>
+                    <div class="details-container">
+                        <img src="./images/education.png" alt="education icon" class="icon" />
+                        <h3>Education</h3>
+                        <P>B.tech in<br> Infomation Technology</P>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        Hello, my name is Poorvi Varshney, and I am currently pursuing a B.Tech in Information
+                        Technology. I have skills in Python, Django, HTML, CSS, and MySQL, with a basic understanding of
+                        C and Java.
+                    </p>
+                </div>
+            </div>
+
+            <img src="./images/arrow.png" alt="Arrow icon" class="icon-arrow" onclick="location.href='#Experience' " />
+        </div>
+    </section>
+    <section id="Experience">
+        <p class="section__text__p1">Explore my</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-container">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Front-end Development</h2>
+                    <div class="article-container">
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>Python</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>java script</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>Block chain</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Back-end Development</h2>
+                    <div class="article-container">
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>My Sql</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>Sql</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>Node js</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article><img src="./images/check.png" alt="experience icon" class="iconn" />
+                            <div>
+                                <h3>Django</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+
+
+                        <img src="./images/arrow.png" alt="Arrow icon" class="icon-arrow"
+                            onclick="location.href='#Projects' " />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Projects">
+        <P class="section__text__p1">Browse my Recent</P>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/pro1.png" alt="project1" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title-project-title">First Project </h2>
+                <div class="btn-conatiner">
+                    <button class="btn-color-1" onclick="location.href='https://github.com/poorvi-98'">Github</button>
+                    <button class="btn-color-1" onclick="location.href='https://github.com/poorvi-98'">Live
+                        demo</button>
+                </div>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/pro2.png" alt="project1" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title-project-title">Second Project </h2>
+                <div class="btn-conatiner">
+                    <button class="btn-color-1" onclick="location.href='https://github.com/poorvi-98'">Github</button>
+                    <button class="btn-color-1" onclick="location.href='https://github.com/poorvi-98'">Live
+                        demo</button>
+                </div>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./images/pro3.png" alt="project1" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title-project-title">Third Project </h2>
+                <div class="btn-conatiner">
+                    <button class="btn-color-1" onclick="location.href='https://github.com/poorvi-98'">Github</button>
+                    <button class="btn-color-1" onclick="location.href='https://github.com/poorvi-98'">Live
+                        demo</button>
+                </div>
+            </div>
+            <img src="./images/arrow.png" alt="Arrow icon" class="icon-arrow" onclick="location.href='#Contact' " />
+        </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section id="Contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact me</h1>
+        <div class="conatct-info-upper-container">
+            <div class="conatct-info-container">
+                <img src="./images/email.png" alt="Email icon" class="icon Contact-icon" />
+                <P><a href="mailto:poorvivarshney81@gmail.com">poorvivarshney81@gmail.com</a>
+                </P>
+            </div>
+            <div class="conatct-info-container">
+                <img src="./images/linkedin.png" alt="Email icon" class="icon Contact-icon" />
+                <P><a href="https://www.linkedin.com/in/poorvi-varshney-163477283/">Linkedin</a>
+                </P>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="footer">
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <P>
+            <marquee>Copyright &#169; 2025 Poorvi Varshney. All Rights Reserved.</marquee>
+        </P>
+    </section>
+
+
+    <script src="script.js.download"> </script>
+
+</body>
+
+</html>
